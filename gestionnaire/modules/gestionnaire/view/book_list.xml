@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="is_reading"/>
+    <field name="title"/>
+    <field name="author"/>
+    <field name="category"/>
+    <field name="genre"/>
+    <field name="support"/>
+</tree>

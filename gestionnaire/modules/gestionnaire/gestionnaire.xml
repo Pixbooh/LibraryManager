@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- ############# -->
+        <!-- # Root Menu # -->
+        <!-- ############# -->
+        <menuitem name="Manager" id="menu_manager" sequence="1"/>
+        <!-- ######## -->
+        <!-- # Type # -->
+        <!-- ######## -->
+        <record model="ir.ui.view" id="category_view_form">
+            <field name="model">gestionnaire.category</field>
+            <field name="type">form</field>
+            <field name="name">category_form</field>
+        </record>
+        <record model="ir.ui.view" id="category_view_list">
+            <field name="model">gestionnaire.category</field>
+            <field name="type">tree</field>
+            <field name="namme">category_list</field>
+        </record>
+        <!-- ######### -->
+        <!-- # Genre # -->
+        <!-- ######### -->
+        <record model="ir.ui.view" id="genre_view_form">
+            <field name="model">gestionnaire.genre</field>
+            <field name="type">form</field>
+            <field name="name">genre_form</field>
+        </record>
+        <record model="ir.ui.view" id="genre_view_list">
+            <field name="model">gestionnaire.genre</field>
+            <field name="type">tree</field>
+            <field name="namme">genre_list</field>
+        </record>
+        <!-- ########## -->
+        <!-- # Author # -->
+        <!-- ########## -->
+        <record model="ir.ui.view" id="author_view_form">
+            <field name="model">gestionnaire.author</field>
+            <field name="type">form</field>
+            <field name="name">author_form</field>
+        </record>
+        <record model="ir.ui.view" id="genre_view_list">
+            <field name="model">gestionnaire.author</field>
+            <field name="type">tree</field>
+            <field name="namme">author_list</field>
+        </record>
+        <!-- ######## -->
+        <!-- # Book # -->
+        <!-- ######## -->
+        <record model="ir.ui.view" id="book_view_form">
+            <field name="model">gestionnaire.book</field>
+            <field name="type">form</field>
+            <field name="name">book_form</field>
+        </record>
+        <record model="ir.ui.view" id="book_view_list">
+            <field name="model">gestionnaire.book</field>
+            <field name="type">tree</field>
+            <field name="namme">book_list</field>
+        </record>
+        <!-- ########### -->
+        <!-- # Support # -->
+        <!-- ########### -->
+        <record model="ir.ui.view" id="support_view_form">
+            <field name="model">gestionnaire.support</field>
+            <field name="type">form</field>
+            <field name="name">support_form</field>
+        </record>
+        <record model="ir.ui.view" id="support_view_list">
+            <field name="model">gestionnaire.support</field>
+            <field name="type">tree</field>
+            <field name="namme">support_list</field>
+        </record>
+    </data>
+</tryton>

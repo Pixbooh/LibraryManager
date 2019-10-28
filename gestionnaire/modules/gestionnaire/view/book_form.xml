@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<form>
+    <label name="is_reading"/>
+    <field name="is_reading"/>
+    <label name="title"/>
+    <field name="title" colspan="3"/>
+    <label name="author"/>
+    <field name="author"/>
+    <label name="category"/>
+    <field name="category" widget="selection"/>
+    <label name="genre"/>
+    <field name="genre" widget="selection"/>
+    <label name="support"/>
+    <field name="support"/>
