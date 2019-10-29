@@ -2,6 +2,7 @@ from trytond.model import ModelSQL, ModelView, fields
 
 
 __all__ = [
+    'Language',
     'Category',
     'Genre',
     'Author',
@@ -11,9 +12,17 @@ __all__ = [
     ]
 
 
+class Language(ModelSQL, ModelView):
+    'Language'
+    __name__ = 'gestionnaire.language'
+
+    name = fields.Char('Name', required=True)
+
 class Category(ModelSQL, ModelView):
     'Category'
     __name__ = 'gestionnaire.category'
+
+    name = fields.Char('Name', required=True)
 
 
 class Genre(ModelSQL, ModelView):
@@ -37,7 +46,9 @@ class Book(ModelSQL, ModelView):
 
     title = fields.Char('Title', required=True)
     author = fields.Many2One('gestionnaire.author', 'Author', required=True,
-                             ondelette='CASCADE')
+                             ondelete='CASCADE')
+    language = fields.Many2One('gestionnaire.language', 'Language',
+                               required=True, ondelete='CASCADE')
     genre = fields.Many2One('gestionnaire.genre', 'Genre', required=False,
                             ondelette='CASCADE')
     category = fields.Many2One('gestionnaire.category', 'Category',
@@ -51,7 +62,7 @@ class Book(ModelSQL, ModelView):
 
     is_reading = fields.Function(fields.Boolean('Is reading',
                                  'getter_is_reading',
-                                 searcher='search_is_reading')
+                                 searcher='search_is_reading'))
 
     @classmethod
     def getter_is_reading(cls, books, name):
